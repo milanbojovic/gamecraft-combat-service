@@ -1,26 +1,42 @@
 # World of Gamecraft
 
-This is a Java Spring Boot application that simulates a game environment. It uses Maven for dependency management and SQL for data storage.
+This is a game project developed using Java, SQL, Spring Boot, and Maven.
 
-## Features
+## Project Structure
 
-- User authentication and authorization using JWT
-- Role-based access control
-- Character creation and management
-- Item management
+The project is structured into several packages, each containing related classes and functionalities.
 
-## Getting Started
+- `rs.maxbet.worldofgamecraft.data`: Contains the data classes for the project.
+- `rs.maxbet.worldofgamecraft.controler`: Contains the controllers for handling HTTP requests.
+- `rs.maxbet.worldofgamecraft.service`: Contains the service classes that handle the business logic.
+- `rs.maxbet.worldofgamecraft.exception`: Contains custom exceptions for the project.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## Key Features
 
-### Prerequisites
+- Dueling system: Users can challenge each other to duels. The duel system supports different modes such as attack, cast, and heal.
+- Role-based access control: Some endpoints are only accessible to users with specific roles.
 
-- Java 11 or higher
-- Maven
-- MSSQL
+## Setup
 
-### Installing
+1. Clone the repository.
+2. Install the dependencies using Maven.
+3. Set up your SQL database and update the application properties with your database credentials.
+4. Run the application.
 
-1. Clone the repository
-```bash
-git clone https://github.com/milanbojovic/worldofgamecraft.git
+## Usage
+
+The application exposes several endpoints under the `/api` path. For example:
+
+- `/api/challenge`: POST request to create a new challenge.
+- `/api/challenge`: GET request to retrieve all challenges.
+- `/api/{characterId}/attack`: POST request to set a character's mode to attack.
+- `/api/{characterId}/cast`: POST request to set a character's mode to cast.
+- `/api/{characterId}/heal`: POST request to set a character's mode to heal.
+
+## Contributing
+
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
