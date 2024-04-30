@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "4ee31361-1a4c-48ca-8ce9-b5add0ee48d8",
+		"name": "Combat Service Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "178308"
+	},
+	"item": [
+		{
+			"name": "GetChallenges",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/challenge",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/challenge",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCharacters",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/characters",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DuelIteration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/durel-iteration",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"durel-iteration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateChallenge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/challenge?challengerId=3&challengeeId=2",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"challenge"
+					],
+					"query": [
+						{
+							"key": "challengerId",
+							"value": "3"
+						},
+						{
+							"key": "challengeeId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetCharacterAttackMode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/1/attack",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"1",
+						"attack"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetCharacterCastMode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/3/cast",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"3",
+						"cast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetCharacterHealMode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\": \"Hobbit\",\n    \"description\": \"Short and angry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{portCombatService}}/api/1/heal",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{portCombatService}}",
+					"path": [
+						"api",
+						"1",
+						"heal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJpZCI6MSwicm9sZSI6IlJPTEVfR2FtZU1hc3RlciIsInN1YiI6ImpvaG4iLCJleHAiOjE3MTM1NjA3NjZ9.DoMMydGXsgQp0MNORXMl99oDGPq7vVpNFqdh6Jt8v4Pgt3h03sFNeLz6_2b05OuhyiTnX9BITTpJhPPgsKpXaA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
