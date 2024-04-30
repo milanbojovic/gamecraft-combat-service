@@ -6,6 +6,7 @@ import rs.maxbet.worldofgamecraft.dao.CharacterRepository;
 import rs.maxbet.worldofgamecraft.dao.UsersRepository;
 import rs.maxbet.worldofgamecraft.data.Character;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,5 +28,9 @@ public class CharacterService {
 
     public void saveCharacter(Character character) {
         characterRepository.save(character);
+    }
+
+    public List<Character> getAllCharacters() {
+        return characterRepository.findAll();
     }
 }

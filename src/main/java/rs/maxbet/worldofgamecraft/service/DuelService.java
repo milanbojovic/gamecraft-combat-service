@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import rs.maxbet.worldofgamecraft.dao.DuelRepository;
 import rs.maxbet.worldofgamecraft.data.Character;
 import rs.maxbet.worldofgamecraft.data.Duel;
+import rs.maxbet.worldofgamecraft.data.transport.DuelOutcomeEvent;
 import rs.maxbet.worldofgamecraft.enumerations.Enumerations;
 import rs.maxbet.worldofgamecraft.exception.CharacterAlreadyInDuelException;
 import rs.maxbet.worldofgamecraft.exception.CharacterNotFoundException;
@@ -21,12 +22,15 @@ public class DuelService {
     private final DuelRepository duelRepository;
     @Autowired
     private final CharacterService characterService;
+    @Autowired
+    private final MessageService messageService;
 
     private static int actionCounter;
 
-    public DuelService(DuelRepository duelRepository, CharacterService characterService) {
+    public DuelService(DuelRepository duelRepository, CharacterService characterService, MessageService messageService) {
         this.duelRepository = duelRepository;
         this.characterService = characterService;
+        this.messageService = messageService;
         actionCounter = 0;
     }
 
@@ -99,6 +103,7 @@ public class DuelService {
     }
 
     private void performAction(Duel duel, Character character, Enumerations.State state, int counter) {
+        if(duel.getStatus().equals(Enumerations.Status.FINISHED)) { return;}
         Character otherCharacter = character.equals(duel.getChallenger()) ? duel.getChallengee() : duel.getChallenger();
         switch (state) {
             case ATTACK:
@@ -123,6 +128,7 @@ public class DuelService {
             } else {
                 duel.setOutcome(Enumerations.Outcome.CHALLENGER_WON);
             }
+            messageService.publishDuelOutcomeEvent(new DuelOutcomeEvent(duel));
         }
         // Save the updated characters
         characterService.saveCharacter(character);

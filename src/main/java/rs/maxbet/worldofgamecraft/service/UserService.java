@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import rs.maxbet.worldofgamecraft.dao.UsersRepository;
 import rs.maxbet.worldofgamecraft.data.Users;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -16,5 +18,13 @@ public class UserService {
     }
     public Users getUserById(Long id) {
         return usersRepository.findById(id).orElse(null);
+    }
+
+    public List<Users> getAllUsers() {
+        return this.usersRepository.findAll();
+    }
+
+    public Users saveUser(Users user) {
+        return (Users)this.usersRepository.save(user);
     }
 }

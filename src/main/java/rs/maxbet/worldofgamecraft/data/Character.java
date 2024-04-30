@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import rs.maxbet.worldofgamecraft.data.transport.CharacterCreationEvent;
+import rs.maxbet.worldofgamecraft.rabbitmq.CharacterCreationListener;
 
 @Entity
 @Table
@@ -25,4 +27,16 @@ public class Character {
     private int baseIntelligence;
     private int baseFaith;
     private int createdBy;
+
+    public Character(CharacterCreationEvent characterCreationEvent) {
+        this.id = characterCreationEvent.getId();
+        this.name = characterCreationEvent.getName();
+        this.health = characterCreationEvent.getHealth();
+        this.mana = characterCreationEvent.getMana();
+        this.baseStrength = characterCreationEvent.getBaseStrength();
+        this.baseAgility = characterCreationEvent.getBaseAgility();
+        this.baseIntelligence = characterCreationEvent.getBaseIntelligence();
+        this.baseFaith = characterCreationEvent.getBaseFaith();
+        this.createdBy = characterCreationEvent.getCreatedBy();
+    }
 }
