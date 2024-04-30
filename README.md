@@ -1,4 +1,4 @@
-# World of Gamecraft
+# World of Gamecraft - Combat Service
 
 This is a game project developed using Java, SQL, Spring Boot, and Maven.
 
