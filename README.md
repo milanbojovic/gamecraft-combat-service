@@ -18,6 +18,7 @@ The project is structured into several packages, each containing related classes
 
 ## Setup
 
+Prerequisites: Make sure that Accounts and Character services are running with all containers (RabbitMQ, SQL Server).
 1. Clone the repository.
 2. Install the dependencies using Maven.
 3. Set up your SQL database and update the application properties with your database credentials.
