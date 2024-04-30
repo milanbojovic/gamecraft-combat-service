@@ -18,15 +18,4 @@ public class CharacterCreationEvent {
     private int baseIntelligence;
     private int baseFaith;
     private int createdBy;
-
-    public CharacterCreationEvent(Character character) {
-        this.id = character.getId();
-        this.name = character.getName();
-        this.health = character.getHealth();
-        this.mana = character.getMana();
-        this.baseStrength = character.getBaseStrength();
-        this.baseAgility = character.getBaseAgility();
-        this.baseIntelligence = character.getBaseIntelligence();
-        this.baseFaith = character.getBaseFaith();
-    }
 }

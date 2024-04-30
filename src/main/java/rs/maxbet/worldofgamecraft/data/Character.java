@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import rs.maxbet.worldofgamecraft.data.transport.CharacterCreationEvent;
-import rs.maxbet.worldofgamecraft.rabbitmq.CharacterCreationListener;
 
 @Entity
 @Table

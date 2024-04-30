@@ -25,6 +25,6 @@ public class UserService {
     }
 
     public Users saveUser(Users user) {
-        return (Users)this.usersRepository.save(user);
+        return this.usersRepository.save(user);
     }
 }

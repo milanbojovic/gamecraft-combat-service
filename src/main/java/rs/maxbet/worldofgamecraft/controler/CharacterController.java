@@ -21,7 +21,7 @@ public class CharacterController {
     @Autowired
     private final CharacterService characterService;
 
-    public CharacterController(CharacterService characterService, RabbitTemplate rabbitTemplate) {
+    public CharacterController(CharacterService characterService) {
         this.characterService = characterService;
     }
 

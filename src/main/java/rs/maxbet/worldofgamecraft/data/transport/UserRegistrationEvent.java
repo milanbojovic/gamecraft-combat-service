@@ -13,9 +13,4 @@ public class UserRegistrationEvent {
     @Id
     private int id;
     private String role;
-
-    public UserRegistrationEvent(Users user) {
-        this.id = user.getId();
-        this.role = user.getRole();
-    }
 }
